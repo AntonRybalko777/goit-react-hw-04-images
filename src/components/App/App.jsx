@@ -49,25 +49,6 @@ export const App = () => {
     getQuery();
   }, [page, query]);
 
-  // async componentDidUpdate(_, prevState) {
-  //   if (page !== prevState.page && page !== 1) {
-  //     try {
-  //       this.setState({ loader: true });
-  //       const fetchedImages = await fetchImages(page, query);
-  //       this.setState(prevState => ({
-  //         cards: [...prevState.cards, ...fetchedImages.hits],
-  //         loadMore: this.state.page < Math.ceil(fetchedImages.totalHits / 12),
-  //       }));
-  //     } catch (e) {
-  //       this.setState({
-  //         error: true,
-  //       });
-  //     } finally {
-  //       this.setState({ loader: false });
-  //     }
-  //   }
-  // }
-
   return (
     <Container>
       <Searchbar onSubmit={getQuery} />
